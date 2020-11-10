@@ -152,7 +152,7 @@ a {
 
 /* all */
 body {
-  font-family: 'Noto Sans TC',
+  font-family: 'Roboto', 'Noto Sans TC',
     sans-serif;
 }
 
@@ -212,8 +212,6 @@ body {
 .title {
   font-size: 48px;
   line-height: 67px;
-  font-family: 'Noto Sans TC',
-    sans-serif;
   font-weight: 700;
   text-align: center;
   margin-bottom: 60px;
@@ -223,11 +221,17 @@ body {
 /* nav */
 
 .header {
-  padding: 30px 88px 30px 88px;
+  padding: 0 88px;
 }
 
-.logo {
-  max-width: 80px;
+.logo a {
+  display: block;
+  width: 80px;
+  height: 49px;
+  background: url(../icon/logo.png) center/cover;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 101%;
 }
 
 .menu li {
@@ -243,6 +247,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
+  padding: 30px 0;
 }
 
 /* banner */
@@ -253,19 +258,15 @@ body {
 }
 
 .banner .container {
-  height: 840px;
-  position: relative;
+  height: 100%;
+  justify-content: flex-end;
 }
 
 .topic {
   font-weight: 700;
   font-size: 64px;
   line-height: 90px;
-  align-items: flex-end;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  text-align: right;
 }
 
 .topic span {
@@ -331,8 +332,6 @@ body {
 }
 
 .categoryName {
-  font-family: 'Roboto',
-    sans-serif;
   font-weight: 900;
   font-style: italic;
   font-size: 48px;
@@ -377,8 +376,6 @@ body {
 }
 
 .series h3 {
-  font-family: 'Roboto',
-    sans-serif;
   font-weight: 700;
   font-size: 72px;
   line-height: 95px;
@@ -404,8 +401,6 @@ body {
 }
 
 .reviewText h4 {
-  font-family: 'Roboto',
-    sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 19px;
@@ -414,8 +409,6 @@ body {
 }
 
 .reviewText p {
-  font-family: 'Roboto',
-    sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -460,15 +453,18 @@ label {
   line-height: 22px;
 }
 
-input,
+.inputGroup input,
 textarea {
-  max-width: 100%;
+  display: block;
+  width: 100%;
   padding: 16px;
 }
 
 .checkboxGroup {
   margin-bottom: 42px;
 }
+
+
 
 .submit {
   font-weight: 400;
@@ -521,8 +517,6 @@ textarea {
 }
 
 .contactMethod a {
-  font-family: 'Roboto',
-    sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 48px;
@@ -537,8 +531,6 @@ textarea {
 }
 
 .copyright p {
-  font-family: 'Roboto',
-    sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
@@ -587,7 +579,7 @@ textarea {
 
   /* nav */
   .header {
-    padding: 30px 0;
+    padding: 0;
   }
 
   .nav {
@@ -863,10 +855,6 @@ textarea {
   }
 
   /* nav */
-  .header {
-    padding: 0;
-  }
-
   .logo {
     max-width: 48px;
     padding: 10px 0;
@@ -896,6 +884,11 @@ textarea {
 
 
   /* banner */
+  .banner {
+    height: 394px;
+    background: url(../img/banner-sm.png) left/cover no-repeat;
+  }
+
   .topic {
     font-size: 32px;
     line-height: 45px;
@@ -1051,7 +1044,7 @@ textarea {
   }
 
   .infoFooter {
-    flex-direction: column;
+    display: block;
     padding: 18px 0 17px;
     position: relative;
   }
@@ -1063,6 +1056,11 @@ textarea {
     right: 0;
     padding: 0;
     margin: 0;
+  }
+
+  .copyright .logo a {
+    width: 46px;
+    height: 28px;
   }
 
   .copyright p {
@@ -1078,8 +1076,8 @@ textarea {
   .otherInfo li {
     font-size: 14px;
     line-height: 20px;
-    margin-right: 24px;
     margin-bottom: 8px;
+    white-space: nowrap;
   }
 
 }
